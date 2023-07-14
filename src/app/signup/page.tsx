@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Axios } from "axios";
 
-const Signup = () => {
+const SignupPage = () => {
+  const router = useRouter();
   const [user, setUser] = React.useState({
     email: "",
     password: "",
     username: "",
   });
+  const [buttonDisabled, serButtonDisabled] = React.useState(true);
 
   const onSignup = async () => {};
 
@@ -57,4 +59,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupPage;
